@@ -73,7 +73,7 @@ function setup() {
 
   CPalette = [[cBlack, cRed], [cAzul, cWhite], [cRed,cSun], [cRed,cAzul],[cSun,cRed]];
 
-  canvas = createCanvas(1080, 720, WEBGL);
+  canvas = createCanvas(700,525, WEBGL);
   canvas.parent('canvas-container'); // Attach canvas to a container div
 
 
