@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Sketch</title>
+
+    <link rel="stylesheet" type="text/css" href="style.css">
+      <script src="libraries/p5.min.js"></script>
+      <script src="libraries/p5.sound.min.js"></script>
+      <script src="https://unpkg.com/ml5@1/dist/ml5.js"></script>
+      <script src="object.js"></script>
+  </head>
+
+  <body>
+
+    
+      <div id="canvas-container">
+        <div id="buttons-container">
+            <svg id="reset-button" onclick="ResetComposition()" width="100" height="100" viewBox="0 0 100 100">
+                 <path d="M79.4984 11.2849C89.7492 17.9128 100 32.0523 100 50.5C100 76.7907 79.0622 98 53.108 98C27.1538 98 6.21592 76.7907 6.21592 50.5C6.21592 37.2442 11.4504 25.2035 20.0654 16.8081C14.94 16.9186 8.17884 15.9244 0 13.6046L4.0349 8.63372C15.8124 8.63372 25.9542 6.64535 34.4602 3L36.8593 4.98837C34.6783 14.157 34.5692 24.6512 36.6412 36.3605L32.6063 41.2209C28.8986 33.4884 26.7176 26.9709 25.9542 21.7791C19.8473 27.8547 13.9586 37.5756 13.9586 50.5C13.9586 72.4826 31.4068 90.157 53.108 90.157C74.7001 90.157 92.2574 72.4826 92.2574 50.5C92.2574 31.1686 78.8441 20.0116 75.1363 17.6919L79.4984 11.2849Z" />
+            </svg>
+
+            <svg id="reset-button" onclick="myCanvasSafe()" width="100" height="100" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <g clip-path="url(#clip0_1575_4314)">
+                  <path d="M71 100L28 100L28 92.1978L47.9564 92.1978C43.6564 83.7363 37.041 75.7143 28 68.022L28 61.6484C35.7179 65.2747 41.6718 68.7912 45.5308 72.1978L45.5308 1.47999e-06L53.359 1.13781e-06L53.359 72.3077C57.2179 68.7912 63.1718 65.2747 71 61.6483L71 68.022C61.959 75.7143 55.3436 83.7363 51.0436 92.1978L71 92.1978L71 100Z" />
+                    </g>
+                    <defs><clipPath id="clip0_1575_4314"> <rect width="100" height="100"/> </clipPath></defs>
+            </svg>
+        </div>
+       
+
+      </div>
+     
+    <script src="sketch.js"></script>
+  </body>
+
+</html>
