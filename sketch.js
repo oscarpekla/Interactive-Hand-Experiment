@@ -5,6 +5,8 @@ let video;
 let myvideo;
 let hands = [];
 
+let start = false;
+
 let myWords = [];
 let myFrases = [
   "WORTE SIND SCHöN ABER HüHNER LEGEN EIER",
@@ -55,6 +57,10 @@ function preload() {
 function setup() {
 
   frameRate(30);
+
+  if (frameCount < 60){
+    start = true;
+  }
 
   cSun = color(248, 214, 64);
   cRed = color(219, 0, 48, 255);
@@ -139,7 +145,8 @@ function draw() {
         pg.clear();
         
         pg.texture(myWords[i].wIMG);
-        pgmesh(corA, corB, corC, corD, 8); 
+        //pgmesh(corA, corB, corC, corD, 8); 
+        pgmesh(corB, corA, corD, corC, 8); 
       }
     }
   }
@@ -178,8 +185,8 @@ function draw() {
 
 function changeWord() {
 
-  
-  if (frameCount % (200/ 2) == 0) {
+  if(start == true){
+    if (frameCount % (200/ 2) == 0) {
 
     meshIMG[wDisplayedCount] = pg.get(); // gets the place Image
 
@@ -195,6 +202,8 @@ function changeWord() {
     //if (wDisplayedCount > myWordsStrings.length*3){
      //}
   }
+  }
+  
   
 }
 
@@ -211,11 +220,7 @@ function NewFrase(){
 function NewColors(){
     let newPalette = int(random(CPalette.length));
     bgColor = CPalette[newPalette][0];
-    print(bgColor);
     txtColor = CPalette[newPalette][1];
-
-    bgColor = CPalette[3][0];
-    txtColor = CPalette[3][1];
 }
 
 function UpdateObjects(){
